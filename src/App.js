@@ -44,7 +44,7 @@ const App = () => {
         <ol className="contact">
           <ul>Phone: (352)470-1693</ul>
           <ul>Email: <a href="mailto:kyle.miller.pokemonpro@gmail.com?subject=App Feedback">kyle.miller.pokemonpro@gmail.com</a></ul>
-          <ul>Twitter: <a href=""></a>@TheOneTrueMort</ul>
+          <ul>Twitter: <a href="https://twitter.com/TheOneTrueMort">@TheOneTrueMort</a></ul>
         </ol>
       </footer>
     </div>
