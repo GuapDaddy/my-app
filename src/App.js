@@ -3,14 +3,13 @@ import Axios from "axios"
 import { v4 as uuidv4 } from 'uuid';
 import Recipe from "./recipe"
 import './App.css';
-import data from './data.json'
 import ToDoList from './ToDoList'
 import ToDoForm from './ToDoForm'
 
 
 
 const App = () => {
-  const [toDoList, setToDoList] = useState(data)
+  const [toDoList, setToDoList] = useState([])
   const [query,setQuery] = useState ("")
   const [recipes, setRecipe] = useState ([])
 

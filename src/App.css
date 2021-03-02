@@ -221,6 +221,7 @@ h1 {
   text-align:center;
   color: #ffffff;
   box-shadow: 1rem 2rem 3rem #aaa;
+  margin-bottom: 2rem;
 }
 
 .remove{
@@ -234,5 +235,4 @@ h1 {
   text-align: center;
   padding-left: 1rem;
   padding-right: 1rem;
-
 }
