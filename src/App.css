@@ -220,4 +220,19 @@ h1 {
   padding-bottom: 2rem;
   text-align:center;
   color: #ffffff;
+  box-shadow: 1rem 2rem 3rem #aaa;
+}
+
+.remove{
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0) !important;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 0.5rem;
+  height: 3rem;
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
 }
