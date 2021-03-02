@@ -207,3 +207,17 @@ h1 {
 .twitter-share-button:hover {
   background-position: 0 -21px;
 }
+
+.todolist {
+  background-color: #40b48e;
+  font-size: 2rem;
+  width: 25%;
+  justify-content: center;
+  border-radius: .5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align:center;
+  color: #ffffff;
+}

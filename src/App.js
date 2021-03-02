@@ -3,9 +3,13 @@ import Axios from "axios"
 import { v4 as uuidv4 } from 'uuid';
 import Recipe from "./recipe"
 import './App.css';
+import data from './data.json'
+import ToDoList from './ToDoList'
+import ToDoForm from './ToDoForm'
 
 
 const App = () => {
+  const [toDoList, setToDoList] = useState(data)
   const [query,setQuery] = useState ("")
   const [recipes, setRecipe] = useState ([])
 
@@ -28,6 +32,25 @@ const App = () => {
     e.preventDefault()
     getData()
   }
+  const handleToggle = (id) => {
+    let mapped = toDoList.map (task=> {
+      return task.id == id ? { ...task, complete: !task.complete} : {...task}
+    })
+    setToDoList(mapped)
+  }
+
+  const handleFilter = () => {
+    let filtered = toDoList.filter(task =>{
+      return !task.complete
+    })
+    setToDoList(filtered)
+  }
+
+  const addTask = (userinput) => {
+    let copy = [...toDoList]
+    copy = [...copy, {id: toDoList.length +1, task: userinput, complete:false}]
+    setToDoList(copy)
+  }
 
   return (
     <div className="App">
@@ -36,6 +59,8 @@ const App = () => {
         <input type="text" placeholder = "Search" autoComplete = "off" onChange={onChange} value={query}/>
         <input type="submit" value="search" />
       </form>
+      <ToDoForm addTask={addTask}/>
+      <ToDoList toDoList={toDoList} handleToggle={handleToggle} handleFilter={handleFilter}/>
       <div className="recipes">
         {recipes !== [] && recipes.map(recipe => <Recipe key={uuidv4 ()} recipe={recipe} />)}
       </div>
