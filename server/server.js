@@ -1,5 +1,4 @@
 const express = require('express')
-const express = require('express')
 const bodyParser = require('body-parser')
 const compression = require('compression')
 const cors = require('cors')
@@ -17,7 +16,7 @@ app.use(compression())
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
 
-app.use('/ingredients', ingredientsRouter)
+app.use('/ingredient', ingredientsRouter)
 
 app.use(function(err,req,res,next) {
     console.error(err.stack)

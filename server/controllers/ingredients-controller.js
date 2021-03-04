@@ -3,7 +3,7 @@ const knex = require('./../db');
 exports.ingredientsAll = async (req, res) => {
     knex
         .select('*')
-        .from('ingredients')
+        .from('ingredient')
         .then(userData => {
             res.json(userData)
         })
@@ -25,7 +25,7 @@ exports.ingredientsCreate = async (res,req) => {
 }
 
 exports.ingredientsDelete = async(req, res) => {
-    knex('ingredients')
+    knex('ingredient')
         .where('id', req.body.id)
         .del()
         .then(() => {
@@ -36,7 +36,7 @@ exports.ingredientsDelete = async(req, res) => {
 exports.ingredientsReset = async (res, req) => 
     knex
         .select('*')
-        .from('ingredients')
+        .from('ingredient')
         .truncate()
         .then(() => {
             res.json({ message: `ingredients list cleared`})
@@ -44,4 +44,3 @@ exports.ingredientsReset = async (res, req) =>
         .catch(err => {
             res.json({ message: `there was an error resetting ingredients list: ${err}`})
         })
-}

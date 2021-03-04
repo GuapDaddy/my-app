@@ -1,6 +1,6 @@
 const express = require('express')
 
-const ingredientsRoute = require ('./../controllers/ingredients-controller.js')
+const ingredientsRoutes = require ('./../controllers/ingredients-controller.js')
 
 const router = express.Router()
 

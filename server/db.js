@@ -10,16 +10,16 @@ const knex = require('knex')({
 })
 
 knex.schema
-    .hasTable('ingredients')
+    .hasTable('ingredient')
         .then((exists) => {
             if (!exists) { 
-                return knex.shema.createTable('ingredients', (table) => {
+                return knex.shema.createTable('ingredient', (table) => {
                     table.increments('id').primary()
-                    table.integer('ingredient')
+                    table.string('ingredient')
                     table.integer('quantity')
             })
             .then(() => {
-                console.log('Table\'Ingredients\'created')
+                console.log('Table\'Ingredient\'created')
             })
             .catch((error) => {
                 console.log('there was an error creating table: ${error}')
@@ -33,7 +33,7 @@ knex.schema
         console.error('There was an error setting up the database: ${error}')
     })
 
-knex.select('*').from('ingredients')
+knex.select('*').from('ingredient')
     .then(data => console.log('data:', data))
     .catch(err=>console.log(err))
 
