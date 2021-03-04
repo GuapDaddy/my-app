@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import Axios from "axios"
 import { v4 as uuidv4 } from 'uuid';
 import Recipe from "./recipe"
-import './App.css';
+import './css/App.css';
 import ToDoList from './ToDoList'
 import ToDoForm from './ToDoForm'
 
