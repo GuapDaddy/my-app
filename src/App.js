@@ -6,8 +6,6 @@ import './css/App.css';
 import ToDoList from './ToDoList'
 import ToDoForm from './ToDoForm'
 
-
-
 const App = () => {
   const [toDoList, setToDoList] = useState([])
   const [query,setQuery] = useState ("")

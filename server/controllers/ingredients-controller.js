@@ -9,7 +9,6 @@ exports.ingredientsAll = async (req, res) => {
         })
 }
 
-
 exports.ingredientsCreate = async (res,req) => {
     knex('ingredients')
         .insert({
