@@ -22,6 +22,10 @@ const App = () => {
     setQuery("")
   }
 
+  const addData = async() =>{
+
+  }
+
   const onChange = (e) => {
     setQuery(e.target.value)
   }
@@ -54,7 +58,7 @@ const App = () => {
   return (
     <div className="App">
       <h1>Home Pantry</h1>
-      <form className= "search-form" onSubmit={onSubmit}>
+      <form className= "search-form" onSubmit={addData}>
         <input type="text" placeholder = "Search" autoComplete = "off" onChange={onChange} value={query}/>
         <input type="submit" value="search" />
       </form>
